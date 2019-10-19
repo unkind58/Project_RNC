@@ -28,5 +28,5 @@ def choose():
             continue                        #should be quit()
 
 
-#print(choose())
-#print(intro())
+print(choose())
+print(intro())
