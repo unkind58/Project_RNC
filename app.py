@@ -52,8 +52,8 @@ class Converter:
 
 
 def atr(number):
-    if number < 0:
-        return "Please enter positive number ahd higher than 0."
+    if number <= 0:
+        return atr(int(input("Please enter positive number ahd higher than 0. arabic to roman: ")))
     range_flag = None
     for key, value in arabic_to_romans.items():
         if value == number:
