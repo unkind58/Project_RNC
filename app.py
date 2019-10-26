@@ -39,10 +39,11 @@ class Converter:
     def rta(self, number):
         """ conversion from Roman to Arabic"""
         arabic = []
-        if number.count("D") > 1 or number.count("L") > 1 or number.count("I") > 3 or number.count("V") > 1\
-                or number.count("IV") > 1 or number.count("IX") > 1 or number.count("X") > 3\
+        if number.count("D") > 1 or number.count("L") > 1 or number.count("IIII") > 0 or number.count("V") > 1\
+                or number.count("IV") > 1 or number.count("IX") > 1 or number.count("XXXX") > 0\
                 or number.count("XL") > 1 or number.count("XC") > 1 or number.count("CD") > 1\
-                or number.count("C") > 3 or number.count("M") > 3:
+                or number.count("CCCC") > 0 or number.count("MMMM") > 0 or number.count("M") > 4\
+                or number.count("C") > 4 or number.count("X") > 4 or number.count("I") > 4:
             Converter().rta(str(input("You entered incorrect Roman number. "
                                       "Please enter again. Roman to Arabic: ").upper()))
         for i in range(len(number)):
