@@ -87,4 +87,4 @@ def repeat():
 if __name__ == "__main__":
     intro()
     choose()
-    reply()
+    repeat()
