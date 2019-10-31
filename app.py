@@ -36,7 +36,7 @@ roman_to_arabic = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 10
 class Converter:
     def rta(self, number):
         """ conversion from Roman to Arabic"""
-        arabic = []
+        arabic = list()
         if number.count("D") > 1 or number.count("L") > 1 or number.count("IIII") > 0 or number.count("V") > 1\
                 or number.count("IV") > 1 or number.count("IX") > 1 or number.count("XXXX") > 0\
                 or number.count("XL") > 1 or number.count("XC") > 1 or number.count("CD") > 1\
@@ -50,7 +50,7 @@ class Converter:
             else:
                 arabic.append(roman_to_arabic[number[i]])
         print("Roman", number, "in Arabic numeral system is:", sum(arabic))
-        return reply()
+        return repeat()
 
 
 def atr(number):
@@ -67,16 +67,16 @@ def atr(number):
         number = number - arabic_num[i] * counter
     atr_result = "".join(atr_list)
     print("Arabic", number_atr, "in Roman numeral system is:", atr_result)
-    return reply()
+    return repeat()
 
 
-def reply():
+def repeat():
     """ this function replies converter"""
-    reply_message = input("Do you want to convert again ? Y/N: ").upper()
+    repeat_message = input("Do you want to convert again ? Y/N: ").upper()
     while True:
-        if "Y" in reply_message:
+        if "Y" in repeat_message:
             choose()
-        elif "N" in reply_message:
+        elif "N" in repeat_message:
             print("As you wish, have a good day !")
             quit()
         else:
